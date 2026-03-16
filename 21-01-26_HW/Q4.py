@@ -12,23 +12,23 @@
 
 maximum = 0
 minimum = None
-r = 1
+i = 1
 films = int(input("enter the number of films: "))
-while r <= films:
+while i <= films:
     rating: int = int(input("enter a rating for film: "))
     if rating > 5 or rating < 1:
         print("rating is out of range, try again")
     else :
         if  minimum is None or rating < minimum :
           minimum = rating
-          r += 1
+          i += 1
         else:
             if  rating > maximum:
               maximum = rating
-              r += 1
+              i += 1
 
             else:
-              r += 1
+              i += 1
 else:
   print("number of films is:", films)
   print("the lowest film rating is:", minimum)
